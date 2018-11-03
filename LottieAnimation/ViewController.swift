@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import Lottie
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var animationView: LOTAnimationView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        startAnimating()
+    }
+    
+    func startAnimating(){
+        animationView.setAnimation(named: "motorcycle")
+        animationView.loopAnimation = true
+        animationView.play()
     }
 
 
